@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PodePedir.View.MainView">
+    <MasterDetailPage.Master>
+
+
+        <!--Um MasterDetailPage é uma página-view que possui duas aréas em sua estrutura
+            
+            MasterDetailPage.Master: o que for criado dentro da area Master, será fixo e exibido em todas as telas da aplicação.
+            MasterDetailPage.Detail: a area de Detail é a parte dinamica desta estrutura, onde todas as páginas são renderizadas nesta aréa conforme solicitada.
+        
+        Resumindo: O tempo toda sera nossa MainView que está em exibicao com nosso Menu Lateral, e quando clicado no menu,
+        abrimos a pagina dentro da MainView na area de Detail.
+        
+        -->
+
+
+        <!-- Define a cor do Background da area Master, que será nosso Menu -->
+        <ContentPage Title="Menu" BackgroundColor="#542437">
+
+            <!--Dentro da area Master, cria um StackLayout que organiza os elementos em pilha (um em cima do outro, e é o que queremos para nosso menu vertical. -->
+            <StackLayout Orientation="Vertical">
+
+                <!--Dentro do nosso StackLayout principal, adicionamos um outro que contem o Titulo do nosso Menu e por ser o primeiro criado, ficará empilhado no topo. -->
+                <StackLayout BackgroundColor="#c02942" HeightRequest="75">
+                    <Label Text="Opções" FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" TextColor="White" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <!-- Após o título, empilhamos uma Listview que irá carregar os itens do nosso Menu -->
+                <ListView x:Name="menu_navegacao" RowHeight="60" SeparatorVisibility="None" BackgroundColor="#542437" ItemSelected="OnMenuItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!-- Design principal dos itens do menu -->
+                                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20">
+                                    <Image Source="{Binding Icone}"  WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
+                                    <Label Text="{Binding Titulo}" FontSize="Medium" VerticalOptions="Center" TextColor="White"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <!-- Area de navegação, está em branca porque está sendo carregada dinamicamente pelo C# -->
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

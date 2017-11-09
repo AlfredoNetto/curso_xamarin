@@ -13,7 +13,7 @@ namespace PodePedir
         {
             InitializeComponent();
 
-            MainPage = new PodePedir.MainPage();
+            MainPage = new PodePedir.View.SplashView();
         }
 
         protected override void OnStart()
