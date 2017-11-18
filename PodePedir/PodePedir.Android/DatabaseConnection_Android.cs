@@ -1,11 +1,11 @@
-﻿
-
-using System;
+﻿using System;
 using PodePedir.DAL;
 using SQLite.Net;
 using System.IO;
 using SQLite.Net.Platform.XamarinAndroid;
+using PodePedir.Droid;
 
+[assembly: Xamarin.Forms.Dependency(typeof(DatabaseConnection_Android))]
 namespace PodePedir.Droid
 {
     public class DatabaseConnection_Android : IDatabaseConnection

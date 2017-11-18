@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ClienteDAL.cs" />
     <Compile Include="DAL\IDatabaseConnection.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Menu.cs" />
@@ -78,13 +79,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\Cliente\ClienteListView.xaml">
+    <EmbeddedResource Include="View\MainView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\MainView.xaml">
+    <EmbeddedResource Include="View\Cliente\ClienteListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

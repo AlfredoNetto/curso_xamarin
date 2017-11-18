@@ -1,20 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace PodePedir.View.Cliente
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+ 
     public partial class ClienteListView : ContentPage
     {
         public ClienteListView()
         {
             InitializeComponent();
         }
-    }
+
+        private void BtnNovoItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnAlterarClick(object sender, EventArgs e)
+        {
+
+        }
+        private void OnRemoverClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnItemTapped(object o, ItemTappedEventArgs e)
+        {
+
+        }
+
+    }  
 }
