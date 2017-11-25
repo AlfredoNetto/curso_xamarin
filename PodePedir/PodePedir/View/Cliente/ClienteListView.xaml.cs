@@ -27,7 +27,7 @@ namespace PodePedir.View.Cliente
         private async void BtnNovoItemClick(object sender, EventArgs e)
         {
             //Abre a tela de ClienteDetail por cima da atual.
-            await Navigation.PushModalAsync(new ClienteDetailView());
+            await Navigation.PushModalAsync(new ClienteDetailView(null));
         }
 
         private void OnAlterarClick(object sender, EventArgs e)

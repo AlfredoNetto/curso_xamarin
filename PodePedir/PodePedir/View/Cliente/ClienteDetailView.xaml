@@ -1,12 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PodePedir.View.Cliente.ClienteDetailView">
+             x:Class="PodePedir.View.Cliente.ClienteDetailView"  BackgroundColor="White">
+    <!--Vamos definir um Background branco para toda a View -->
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <!-- Todo o conteúdo dentro de uma ScrollView pode ser rolado na Vertical caso todos os elementos nao caibam dentro da View. -->
+        <ScrollView VerticalOptions="Start">
+
+            <!-- Cricao da StackLayout Principal da nossa estrutura para organizar os campos cada um em uma linha -->
+            <StackLayout VerticalOptions="Center">
+
+                <!-- Vamos usar a estrutura do Grid para organizar em uma unica linha os campos e no final dois botoes em uma única linha -->
+                <Grid>
+                    <!-- Definição das linhas da nossa grid -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- Definição das colunas do nosso grid -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- No topo, vamos usara uma StackLayout com um Label para fazer uma barra de título.
+                    A propriedade "Text" será manipulada via Binding para que possamos mudar o titulo dinamicamente: Cadastrar x Alterar  -->
+                    <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="#542437" VerticalOptions="FillAndExpand" Grid.ColumnSpan="2">
+                        <Label Text="{Binding Titulo}" FontSize="Large" FontAttributes="Bold" TextColor="#ecd078" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    <!--Definição de todos os campos, e em qual linha x coluna cada campo ficará.-->
+                    <Entry Placeholder="Nome do Cliente" PlaceholderColor="Gray"
+                   Grid.Row="1" Grid.Column="0" TextColor="Black" Text="{Binding Nome}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Telefone" TextColor="Black" PlaceholderColor="Gray"
+                   Grid.Row="2" Grid.Column="0"  Text="{Binding Telefone}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Endereço" TextColor="Black" PlaceholderColor="Gray"
+                   Grid.Row="3" Grid.Column="0" Text="{Binding Endereco}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Número" TextColor="Black" PlaceholderColor="Gray"
+                   Grid.Row="4" Grid.Column="0" Text="{Binding Numero}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Bairro" TextColor="Black" PlaceholderColor="Gray"
+                   Grid.Row="5" Grid.Column="0" Text="{Binding Bairro}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Cidade" TextColor="Black" PlaceholderColor="Gray"
+                   Grid.Row="6" Grid.Column="0" Text="{Binding Cidade}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+
+                    <!-- Picker é semelhante a um Combobox, é uma caixão de seleção. -->
+                    <Picker TextColor="Black" x:Name="pkEstados" Title="Selecione o estado" SelectedItem="{Binding Estado}"
+                   Grid.Row="7" Grid.Column="0" Margin="10,0,0,10" Grid.ColumnSpan="2"/>
+
+                    <!-- Aqui temos nosso botão, perceba que SALVAR fica na linha 8, mas coluna 0. Enquanto CANCELAR também está na linha 8, mas coluna 1.-->
+                    <Button Text="SALVAR" Command="{Binding Gravar}" BackgroundColor="Green" TextColor="White" FontAttributes="Bold"
+                      Grid.Row="8" Grid.Column="0" Margin="10,0,5,0"/>
+                    <Button Text="CANCELAR" x:Name="BtnCancelar" BackgroundColor="Navy" TextColor="White" FontAttributes="Bold"
+                      Grid.Row="8" Grid.Column="1" Margin="5,0,10,0" Clicked="BtnCancelar_Clicked"/>
+                </Grid>
+            </StackLayout>
+            <!-- Fim do stackLayout principal.-->
+        </ScrollView>
+        <!-- Fim da área de Rolagem.-->
+
+
     </ContentPage.Content>
 </ContentPage>
