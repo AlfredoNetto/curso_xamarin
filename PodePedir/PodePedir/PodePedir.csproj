@@ -42,6 +42,7 @@
     <Compile Include="DAL\IDatabaseConnection.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Enum\Opcoes.cs" />
+    <Compile Include="Model\Global.cs" />
     <Compile Include="Model\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ClienteViewModel.cs" />

@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using PodePedir.Model.Enum;
 using PodePedir.DAL;
+using PodePedir.Model;
 
 namespace PodePedir.View.Cliente
 {
@@ -15,13 +16,20 @@ namespace PodePedir.View.Cliente
         public ClienteListView()
         {
             InitializeComponent();
-
-            Opcoes Acao = Opcoes.Selecionar;
-
-            if(Acao == Opcoes.Selecionar)
+            
+            if(Global.Acao == Opcoes.Selecionar)
             {
                 lblTitulo.Text = "SELECIONAR CLIENTE";
+                BtnNovoItem.IsVisible = false;
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            //é sempre disparado quando a tela recebo o foco.
+            base.OnAppearing();
+            
+            lvClientes.ItemsSource = clienteDAL.GetAll();
         }
 
         private async void BtnNovoItemClick(object sender, EventArgs e)
@@ -30,13 +38,30 @@ namespace PodePedir.View.Cliente
             await Navigation.PushModalAsync(new ClienteDetailView(null));
         }
 
-        private void OnAlterarClick(object sender, EventArgs e)
+        private async void OnAlterarClick(object sender, EventArgs e)
         {
+            //Resgata o item selecionado
+            var mi = ((MenuItem)sender);
+            //Converte o item selecionado em um objeto Cliente
+            var cliente = mi.CommandParameter as Model.Cliente;
+            //Chama a tela de Detalhes do Cliente.
+            await Navigation.PushModalAsync(new ClienteDetailView(cliente));
 
         }
-        private void OnRemoverClick(object sender, EventArgs e)
+        private async void OnRemoverClick(object sender, EventArgs e)
         {
+            var mi = ((MenuItem)sender);
+            var cliente = mi.CommandParameter as Model.Cliente;
 
+            var opcao = await DisplayAlert("Confirmação!",
+                "Deseja excluir o cliente " + cliente.Nome.ToUpper() + "?",
+                "Sim", "Não");
+
+            if(opcao)
+            {
+                clienteDAL.DeleteById((long)cliente.ClienteId);
+                lvClientes.ItemsSource = clienteDAL.GetAll();
+            }
         }
 
         private void OnItemTapped(object o, ItemTappedEventArgs e)
