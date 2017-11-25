@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PodePedir.View.Produto.ProdutoListView">
+    <ContentPage.Content>
+
+        <Button Text="NOVO PRODUTO" x:Name="BtnNovoItem" 
+        BackgroundColor="Green" TextColor="White" FontAttributes="Bold" 
+        HeightRequest="55" Margin="10,0,10,0" 
+        Clicked="BtnNovoItem_Clicked"/>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,5 +1,6 @@
 ﻿using PodePedir.Model;
 using PodePedir.View.Cliente;
+using PodePedir.View.Produto;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -28,10 +29,12 @@ namespace PodePedir.View
             this.menuList = new List<Menu>();
 
             // Cria as páginas de navegação, definindo Titulo e Icone.
-            var clientes = new Menu() { Titulo = "CLIENTES", Icone = "food.png", TargetType = typeof(ClienteListView) };
+            var clientes = new Menu() { Titulo = "CLIENTES", Icone = "cliente.png", TargetType = typeof(ClienteListView) };
+            var produtos = new Menu() { Titulo = "PRODUTOS", Icone = "food.png", TargetType = typeof(ProdutoListView) };
 
             // Adiciona o menu na lista de menus.
             menuList.Add(clientes);
+            menuList.Add(produtos);
 
             // Carrega o ItemSource da ListView do menu na MainPage.xaml
             menu_navegacao.ItemsSource = menuList;

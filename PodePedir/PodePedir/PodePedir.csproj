@@ -40,12 +40,16 @@
     </Compile>
     <Compile Include="DAL\ClienteDAL.cs" />
     <Compile Include="DAL\IDatabaseConnection.cs" />
+    <Compile Include="DAL\ProdutoDAL.cs" />
+    <Compile Include="Model\ByteToImageSourceConverter.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Enum\Opcoes.cs" />
     <Compile Include="Model\Global.cs" />
     <Compile Include="Model\Menu.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ClienteViewModel.cs" />
+    <Compile Include="ViewModel\ProdutoViewModel.cs" />
     <Compile Include="View\Cliente\ClienteDetailView.xaml.cs">
       <DependentUpon>ClienteDetailView.xaml</DependentUpon>
     </Compile>
@@ -54,6 +58,12 @@
     </Compile>
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produto\ProdutoDetailView.xaml.cs">
+      <DependentUpon>ProdutoDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produto\ProdutoListView.xaml.cs">
+      <DependentUpon>ProdutoListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SplashView.cs" />
   </ItemGroup>
@@ -98,6 +108,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Cliente\ClienteDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Produto\ProdutoListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Produto\ProdutoDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

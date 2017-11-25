@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conv="clr-namespace:PodePedir.Model"
+             x:Class="PodePedir.View.Produto.ProdutoDetailView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:ByteToImageSourceConverter x:Key="convImage"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <!-- Titulo da Pagina -->
+                <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="#542437" VerticalOptions="FillAndExpand" Grid.ColumnSpan="2">
+                    <Label Text="{Binding Titulo}" FontSize="Large" FontAttributes="Bold" TextColor="#ecd078" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <!-- Campos -->
+                <Entry Placeholder="Nome do Produto" TextColor="Black" PlaceholderColor="Gray" x:Name="txtNome"
+                   Grid.Row="1" Grid.Column="0" Text="{Binding Nome}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+
+                <Entry Placeholder="Preço" TextColor="Black" PlaceholderColor="Gray" x:Name="txtPreco"
+                   Grid.Row="2" Grid.Column="0" Text="{Binding Preco}" Margin="10,0,0,0" Keyboard="Numeric"/>
+
+                <Picker TextColor="Black" x:Name="pkCategoria" Title="Categoria" SelectedItem="{Binding Categoria}"
+                   Grid.Row="3" Grid.Column="0" Margin="10,0,0,10" />
+
+                <Image x:Name="fotoAlbum" Aspect="AspectFit" HorizontalOptions="FillAndExpand" Source="{Binding Foto, Converter={StaticResource convImage}}"
+                 VerticalOptions="FillAndExpand" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" />
+
+                <Label Text="Escreva uma descrição no campo a baixo:" HorizontalOptions="Center" VerticalOptions="End" Grid.Row="4"
+                 Grid.Column="0" Grid.ColumnSpan="2" TextColor="Gray"/>
+
+                <Editor VerticalOptions="FillAndExpand" Text="{Binding Descricao}" x:Name="txtDescricao"
+                Keyboard="Chat" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+
+                <!-- Botões -->
+
+                <Button Text="SALVAR" x:Name="btnSalvar" Clicked="btnSalvar_Clicked" BackgroundColor="Green" TextColor="White" FontAttributes="Bold"
+                      Grid.Row="6" Grid.Column="0" Margin="10,0,5,0"/>
+                <Button Text="ESCOLHER FOTO" BackgroundColor="Navy" TextColor="White" FontAttributes="Bold"
+                      Grid.Row="6" Grid.Column="1" Margin="5,0,10,0" Clicked="OnAlbumClicked"/>
+
+                <Button Text="TIRAR UMA FOTO AGORA" BackgroundColor="OrangeRed" TextColor="White" FontAttributes="Bold"
+                      Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,0,10,0" Clicked="OnBotaoCamera"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
