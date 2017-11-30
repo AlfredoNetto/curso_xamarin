@@ -7,5 +7,6 @@ namespace PodePedir.Model
     {
         public static Opcoes Acao { get; set; }
         public static Cliente GCliente { get; set; }
+        public static Produto GProduto { get; set; }
     }
 }

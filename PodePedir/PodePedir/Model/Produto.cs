@@ -1,9 +1,5 @@
 ﻿using SQLite.Net.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PodePedir.Model
 {
@@ -15,6 +11,6 @@ namespace PodePedir.Model
         public string Categoria { get; set; }
         public decimal Preco { get; set; }
         public string Descricao { get; set; }
-        public Byte[] Foto { get; set ; }
+        public Byte[] Foto { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using System.Globalization;
 using System.IO;
 using Xamarin.Forms;
 
+
 namespace PodePedir.Model
 {
     public class ByteToImageSourceConverter : IValueConverter

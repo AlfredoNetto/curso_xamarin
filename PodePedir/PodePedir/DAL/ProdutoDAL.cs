@@ -1,25 +1,20 @@
 ﻿using PodePedir.Model;
 using SQLite.Net;
 using System.Collections.Generic;
-using Xamarin.Forms;
 using System.Linq;
+using Xamarin.Forms;
 
 namespace PodePedir.DAL
 {
-    public class ProdutoDAL
+    public class ProdutoDal
     {
         private SQLiteConnection sqlConnection;
 
-        public ProdutoDAL()
+        public ProdutoDal()
         {
-            //Captura com a conexão com o banco de dados.
-            this.sqlConnection =
-            DependencyService.Get<IDatabaseConnection>().DbConnection();
-
-            //Cria uma tabela baseada no modelo Cliente.
+            this.sqlConnection = DependencyService.Get<IDatabaseConnection>().DbConnection();
             this.sqlConnection.CreateTable<Produto>();
         }
-
 
         public void Add(Produto produto)
         {
@@ -38,25 +33,19 @@ namespace PodePedir.DAL
 
         public IEnumerable<Produto> GetAll()
         {
-            return (from t in sqlConnection.Table<Produto>()
-                    select t).OrderBy(i => i.Nome).ToList();
-        }
-       
-        public Produto GetByID(long? id)
-        {
-            return sqlConnection.Table<Produto>().FirstOrDefault
-                (c => c.IdProduto == id);
+            return (from t in sqlConnection.Table<Produto>() select t).OrderBy(i => i.Nome).ToList();
         }
 
         public IEnumerable<string> GetCategorias()
         {
+
             List<string> Categorias = new List<string>();
             Categorias.Add("Bebidas");
             Categorias.Add("Porções");
             Categorias.Add("Lanches");
             Categorias.Add("Massas");
+
             return Categorias;
         }
-
     }
 }

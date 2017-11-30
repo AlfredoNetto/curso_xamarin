@@ -1,13 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conv="clr-namespace:PodePedir.Model"
              x:Class="PodePedir.View.Produto.ProdutoListView">
-    <ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:ByteToImageSourceConverter x:Key="convImage"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <Button Text="NOVO PRODUTO" x:Name="BtnNovoItem" 
-        BackgroundColor="Green" TextColor="White" FontAttributes="Bold" 
-        HeightRequest="55" Margin="10,0,10,0" 
-        Clicked="BtnNovoItem_Clicked"/>
-        
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="White">
+
+
+            <StackLayout BackgroundColor="#542437" VerticalOptions="FillAndExpand" Grid.ColumnSpan="2">
+                <StackLayout.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,30" Android="0,0,0,15" />
+                </StackLayout.Padding>
+                <Label Text="CARDÁPIO CADASTRADOS" x:Name="lblTitulo" FontSize="Large" FontAttributes="Bold" TextColor="#ecd078" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout>
+                <StackLayout.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,30" Android="10" />
+                </StackLayout.Padding>
+
+                <SearchBar Placeholder="Pesquisar produto" PlaceholderColor="Gray" TextColor="Black" TextChanged="OnTextChanged"/>
+
+                <ListView x:Name="lvProdutos" IsGroupingEnabled="True" GroupDisplayBinding="{Binding key}" HasUnevenRows="True" ItemTapped="OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="OnAlterarClick" CommandParameter="{Binding .}" Text="Alterar" />
+                                    <MenuItem Clicked="OnRemoverClick" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <Grid HeightRequest="50">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{Binding Foto, Converter={StaticResource convImage}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                    <Label Grid.Row="0" Grid.Column="1"  Text="{Binding Nome}" FontAttributes="Bold" FontSize="Medium" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                                    <Label Grid.Row="0" Grid.Column="2"  Text="{Binding Preco, StringFormat='{0:C}'}" FontAttributes="Bold" FontSize="Small" TextColor="Green" HorizontalTextAlignment="End"  />
+                                    <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  Text="{Binding Descricao}" FontAttributes="Italic"  FontSize="Micro" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#c02942">
+                                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding key}" FontSize="Medium" TextColor="White" FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+
+                </ListView>
+
+                <Button Text="NOVO PRODUTO" x:Name="BtnNovoItem" BackgroundColor="Green" TextColor="White" FontAttributes="Bold" HeightRequest="55" Margin="10,0,10,0" Clicked="BtnNovoItem_Clicked"/>
+
+
+            </StackLayout>
+
+
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
