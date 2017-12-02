@@ -1,12 +1,139 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conv="clr-namespace:PodePedir.Model"
              x:Class="PodePedir.View.Pedido.PedidoDetailView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:ByteToImageSourceConverter x:Key="convImage"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!-- Todo o conteúdo dentro de uma ScrollView pode ser rolado na Vertical caso todos os elementos nao caibam dentro da View. -->
+        <ScrollView VerticalOptions="Start">
+
+            <!-- Cricao da StackLayout Principal da nossa estrutura para organizar os campos cada um em uma linha -->
+            <StackLayout VerticalOptions="Center">
+
+                <Grid>
+                    <!-- Definição das linhas da nossa grid -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <!--titulo -->
+                        <RowDefinition Height="Auto"/>
+                        <!--selecionar cliente -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- seleciona produto -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- valor da compra -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- botoes de add e remover da lista -->
+                    </Grid.RowDefinitions>
+                    <!-- Definição das colunas do nosso grid -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- titulo -->
+                    <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="#542437" VerticalOptions="FillAndExpand" Grid.ColumnSpan="3">
+                        <Label Text="DETALHES DO PEDIDO" FontSize="Large" FontAttributes="Bold" TextColor="#ecd078" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    <!-- campo de selecao de cliente -->
+                    <Label Text="Clique na lupa para selecionar um cliente" x:Name="txtCliente" VerticalTextAlignment="Center"
+                   Grid.Row="1" Grid.Column="0" TextColor="Black" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Image Source="search.png" Grid.Row="1" Grid.Column="2" Aspect="AspectFit" Margin="4,4,4,4" x:Name="selecionaCliente">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSelecionarCliente" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+
+                    <!-- campo de selecao de produto -->
+                    <Label Text="Clique na lupa para selecionar um produto" x:Name="txtProduto" IsEnabled="False" VerticalTextAlignment="Center"
+                   Grid.Row="2" Grid.Column="0" TextColor="Black" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                    <Image Source="search.png" Grid.Row="2" Grid.Column="2" Aspect="AspectFit" Margin="4,4,4,4" x:Name="selecionaProduto">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSelecionarProduto" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+
+                    <Stepper Grid.Row="3" Grid.Column="0" Minimum="1" Increment="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" ValueChanged="OnStepperValueChanged"/>
+                    <Entry Grid.Row="3" Grid.Column="1" x:Name="txtQuantidade" Text="1" HorizontalTextAlignment="Center"/>
+                    <Image Source="addproduto.png" Grid.Row="3" Grid.Column="2" Aspect="AspectFit" Margin="4,4,4,4" x:Name="AddProduto">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAddProduto" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <!-- titulo listview -->
+                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="TOTAL: R$ 0,0" x:Name="txtValor"
+                           FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+
+                </Grid>
+
+
+
+                <!-- listview de itens do pedido -->
+                <ListView x:Name="lvProdutos" HasUnevenRows="True" Margin="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem CommandParameter="{Binding .}" Text="Remover Produto" IsDestructive="True" Clicked="OnDelete" />
+                                </ViewCell.ContextActions>
+                                <Grid HeightRequest="50">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{Binding Foto, Converter={StaticResource convImage}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                    <Label Grid.Row="0" Grid.Column="1"  Text="{Binding Nome}" FontAttributes="Bold" FontSize="Medium" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                                    <Label Grid.Row="0" Grid.Column="2"  Text="{Binding ValorTotal, StringFormat='{0:C}'}" FontAttributes="Bold" FontSize="Small" TextColor="Green" HorizontalTextAlignment="End"  />
+                                    <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  Text="{Binding Descricao}" FontAttributes="Italic"  FontSize="Micro" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#c02942">
+                                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding key}" FontSize="Medium" TextColor="White" FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+
+                </ListView>
+
+
+
+
+                <Button Text="SALVAR" x:Name="btnSalvar" BackgroundColor="Green" TextColor="White" VerticalOptions="Start" 
+                        FontAttributes="Bold" Margin="5, 5, 5, 5" Clicked="btnSalvar_Clicked"/>
+
+
+
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
