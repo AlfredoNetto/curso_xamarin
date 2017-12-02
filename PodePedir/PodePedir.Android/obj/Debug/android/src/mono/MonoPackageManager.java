@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "PodePedir.Android.dll" comes first in this list. */
 		"PodePedir.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"PCLStorage.Abstractions.dll",
 		"PCLStorage.dll",
 		"Plugin.CurrentActivity.dll",

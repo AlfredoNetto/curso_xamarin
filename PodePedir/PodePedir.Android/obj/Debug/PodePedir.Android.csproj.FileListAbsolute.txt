@@ -81,3 +81,8 @@ C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debu
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debug\res\drawable\cliente.png
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debug\res\drawable\cart.png
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debug\res\drawable\list.png
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\obj\Debug\res\drawable\bag.png
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir.Android\bin\Debug\Newtonsoft.Json.xml

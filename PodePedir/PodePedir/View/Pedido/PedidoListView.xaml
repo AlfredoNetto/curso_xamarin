@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PodePedir.View.Pedido.PedidoListView">
+    <ContentPage.Content>
+
+
+        <!-- StackLayout principal -->
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+
+            <!-- StackLayout com o Título da Página -->
+            <StackLayout BackgroundColor="#542437" VerticalOptions="FillAndExpand" Grid.ColumnSpan="2">
+                <StackLayout.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,30" />
+                </StackLayout.Padding>
+                <Label Text="PEDIDOS NA FILA" FontSize="Large" FontAttributes="Bold" TextColor="#ecd078" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="lblTitulo"/>
+            </StackLayout>
+            <!-- Fim do StackLayout com o Título da Página -->
+
+            <!-- Grid Principal, que é um Layout em forma de Linhas e Colunas igual uma Tabela. -->
+            <Grid>
+                <!-- Define o espaçamento de Padding para cada plataforma especifica -->
+                <Grid.Padding HorizontalOptions="FillAndExpand">
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.iOS>
+                            5, 10, 5, 10
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            5, 10, 5, 10
+                        </OnPlatform.Android>
+                    </OnPlatform>
+                </Grid.Padding>
+                <!-- Define as Linhas do Grid -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <!-- Ocupa todo o espaço -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Se ajusta de acordo com o tamanho do objeto exibido -->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <!-- Combina o minimo 1 de largura, mas ocupando todo o espaço -->
+                </Grid.ColumnDefinitions>
+
+                <StackLayout>
+                    <ActivityIndicator  AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,-1,-1" x:Name="listIndicator"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+
+
+
+                <!-- Definicao da ListView que será exibida na Primeira Linha e Primeira Coluna do Grid. -->
+                <ListView Grid.Row="0" Grid.Column="0" x:Name="lvClientes" ItemTapped="OnItemTapped"
+                  HasUnevenRows="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate BackgroundColor="#e6ffe6">
+                        <DataTemplate>
+                            <ViewCell>
+                                <!-- O ContextActions são as opções de Ações (No Android exibida quando precisionado o item da lista e no iOS quando arrastado o item da list.  -->
+                                <ViewCell.ContextActions>
+                                    <!-- O Binding em . refere-se ao objeto selecionado, e o Clicked diz qual método será execado quando a opção de ação é clicada. -->
+                                    <MenuItem Clicked="OnRemoverClick" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                                    <!-- IsDestructive após remover, já irá realizar um Refresh, remontando a ListView mostrar a lista atualizada sem o item excluido. -->
+                                </ViewCell.ContextActions>
+
+                                <!--Grid dentro da ListView para organizar as informações contidas em cada linha. -->
+                                <Grid Padding="5, 5, 20, 5">
+                                    <!--Definição das linhas-->
+                                    <Grid.RowDefinitions >
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Definição das colunas -->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Campo que irá exibir o Nome do cliente -->
+                                    <Label Text="{Binding NomeCliente}" TextColor="Black" FontSize="Medium"
+                          Grid.Row="0" Grid.Column="0" />
+                                    <!-- Campo que irá exibir o Telefone do cliente -->
+                                    <Label Text="{Binding Descricao}" TextColor="Navy" FontSize="Small"
+                          Grid.Row="1" Grid.Column="0"
+                         HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                                <!--Fim do Grid da lista -->
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+
+            </Grid>
+            <!-- Fim do Grid Principal-->
+        </StackLayout>
+        <!-- Fim do StackLayout Principal -->
+
+
+
+    </ContentPage.Content>
+</ContentPage>

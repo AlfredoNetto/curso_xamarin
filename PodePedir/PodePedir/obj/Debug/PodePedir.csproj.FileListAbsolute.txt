@@ -28,3 +28,14 @@ C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.xml
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Produto.ProdutoListView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Produto.ProdutoDetailView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoListView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoDetailView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.dll.config
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.csproj.App.config
