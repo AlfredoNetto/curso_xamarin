@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:pg="clr-namespace:PodePedir.View.Pedido" 
-            x:Class="PodePedir.View.Pedido.PedidoView">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pg="clr-namespace:PodePedir.View.Pedido"   
+             x:Class="PodePedir.View.Pedido.PedidoView">
 
     <TabbedPage.Children>
         <pg:PedidoListView Title="Listagem" Icon="list.png" x:Name="listagem"/>
-        <pg:PedidoDetailView Title="Novo" Icon="cart.png" x:Name="inserir"/>
+        <pg:PedidoDetailView Title="Novo" Icon="add.png" x:Name="inserir"/>
     </TabbedPage.Children>
     
 </TabbedPage>

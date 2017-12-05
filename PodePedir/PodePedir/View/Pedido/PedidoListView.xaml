@@ -87,14 +87,14 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
-
+             
 
             </Grid>
             <!-- Fim do Grid Principal-->
         </StackLayout>
         <!-- Fim do StackLayout Principal -->
-
-
+        
+        
 
     </ContentPage.Content>
 </ContentPage>

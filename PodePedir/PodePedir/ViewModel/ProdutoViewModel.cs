@@ -1,6 +1,6 @@
-﻿using PodePedir.DAL;
+﻿using PodePedir.Dal;
 using PodePedir.Model;
-using PodePedir.Model.Enum;
+using PodePedir.Model.Enums;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace PodePedir.ViewModel
 {
-    public class ProdutoViewModel : INotifyPropertyChanged
+    class ProdutoViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

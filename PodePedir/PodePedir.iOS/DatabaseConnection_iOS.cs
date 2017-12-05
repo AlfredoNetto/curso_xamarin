@@ -2,7 +2,7 @@
 using SQLite.Net;
 using System.IO;
 using SQLite.Net.Platform.XamarinIOS;
-using PodePedir.DAL;
+using PodePedir.Dal;
 using PodePedir.iOS;
 
 [assembly: Xamarin.Forms.Dependency(typeof(DatabaseConnection_iOS))]

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 
-namespace PodePedir.DAL
+namespace PodePedir.Dal
 {
     public class ProdutoDal
     {
+
+
         private SQLiteConnection sqlConnection;
 
         public ProdutoDal()
@@ -47,5 +49,8 @@ namespace PodePedir.DAL
 
             return Categorias;
         }
+
+
+
     }
 }

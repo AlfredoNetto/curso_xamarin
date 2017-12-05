@@ -1,6 +1,6 @@
 ﻿using SQLite.Net;
 
-namespace PodePedir.DAL
+namespace PodePedir.Dal
 {
     public interface IDatabaseConnection
     {

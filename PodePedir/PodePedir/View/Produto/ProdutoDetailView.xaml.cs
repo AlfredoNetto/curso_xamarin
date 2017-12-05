@@ -1,7 +1,7 @@
 ﻿using PCLStorage;
 using Plugin.Media;
-using PodePedir.DAL;
-using PodePedir.Model.Enum;
+using PodePedir.Dal;
+using PodePedir.Model.Enums;
 using PodePedir.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,6 @@ namespace PodePedir.View.Produto
 {
     public partial class ProdutoDetailView : ContentPage
     {
-
         private ProdutoViewModel produtoViewModel;
         Model.Produto produto_selecionado = null;
 
@@ -50,7 +49,6 @@ namespace PodePedir.View.Produto
 
         }
 
-
         public async void OnAlbumClicked(object sender, EventArgs e)
         {
             try
@@ -77,7 +75,7 @@ namespace PodePedir.View.Produto
                 var stream = file.GetStream();
                 var memoryStream = new MemoryStream();
                 stream.CopyTo(memoryStream);
-
+                
                 fotoAlbum.Source = ImageSource.FromStream(() =>
                 {
                     var s = file.GetStream();
@@ -97,6 +95,11 @@ namespace PodePedir.View.Produto
         }
 
 
+
+    
+
+
+
         private void PegaFoto()
         {
             if (this.produto_selecionado == null)
@@ -106,6 +109,7 @@ namespace PodePedir.View.Produto
 
             this.produto_selecionado.Foto = bytesFoto;
         }
+
 
         private async void Salvar()
         {
@@ -197,8 +201,5 @@ namespace PodePedir.View.Produto
                 await App.Current.MainPage.DisplayAlert("Ops", ex.Message, "OK");
             }
         }
-
-
-
     }
 }

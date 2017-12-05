@@ -24,15 +24,17 @@ namespace PodePedir.View
             CarregaMenu();
         }
 
+
         private void CarregaMenu()
         {
             //Instância a nossa lista que irá armazenar os itens do menu.
             this.menuList = new List<Menu>();
 
             // Cria as páginas de navegação, definindo Titulo e Icone.
-            var clientes = new Menu() { Titulo = "CLIENTES", Icone = "cliente.png", TargetType = typeof(ClienteListView) };
-            var produtos = new Menu() { Titulo = "PRODUTOS", Icone = "food.png", TargetType = typeof(ProdutoListView) };
-            var pedidos = new Menu() { Titulo = "PEDIDOS", Icone = "bag.png", TargetType = typeof(PedidoView)};
+            var clientes = new Menu() { Titulo = "CLIENTES", Icone = "food.png", TargetType = typeof(ClienteListView) };
+            var produtos = new Menu() { Titulo = "PRODUTOS", Icone = "waiter.png", TargetType = typeof(ProdutoListView) };
+            var pedidos = new Menu() { Titulo = "PEDIDOS", Icone = "delivery.png", TargetType = typeof(PedidoView) };
+
 
             // Adiciona o menu na lista de menus.
             menuList.Add(clientes);
@@ -43,12 +45,18 @@ namespace PodePedir.View
             menu_navegacao.ItemsSource = menuList;
 
             // Inicia co menu lateral na Master e no Detail com a pagina inicial.
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ClienteListView)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ProdutoListView)));
         }
 
         //Este Delegate (evento) é desparado sempre quando um item da Listview é clicado.
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            //Limpa variaveis globais ao clicar em outro menu.
+            Global.Acao = Model.Enums.Opcoes.Nenhum;
+            Global.GCliente = null;
+            Global.GProduto = null;
+
+
             //a variavel "e" guarda o objeto-item clicado, assim fazemos um cast-convertermos para um objeto do tipo Menu 
             var item = (Menu)e.SelectedItem;
 
@@ -61,5 +69,7 @@ namespace PodePedir.View
             //não matém o menu aberto, ou seja, após clicar no item recolhe o menu.
             IsPresented = false;
         }
+
+
     }
 }

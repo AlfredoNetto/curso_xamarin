@@ -1,6 +1,6 @@
-﻿using PodePedir.DAL;
+﻿using PodePedir.Dal;
 using PodePedir.Model;
-using PodePedir.Model.Enum;
+using PodePedir.Model.Enums;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -21,6 +21,7 @@ namespace PodePedir.View.Produto
                 BtnNovoItem.IsVisible = false;
             }
         }
+
 
         protected override void OnAppearing()
         {
@@ -99,6 +100,10 @@ namespace PodePedir.View.Produto
                 await Navigation.PopAsync();
             }
 
-        }   
+        }
+
+
+
+
     }
 }

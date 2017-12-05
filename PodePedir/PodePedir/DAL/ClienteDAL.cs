@@ -1,22 +1,19 @@
 ﻿using PodePedir.Model;
 using SQLite.Net;
 using System.Collections.Generic;
-using Xamarin.Forms;
 using System.Linq;
+using Xamarin.Forms;
 
-namespace PodePedir.DAL
+namespace PodePedir.Dal
 {
     public class ClienteDAL
     {
         private SQLiteConnection sqlConnection;
 
+
         public ClienteDAL()
         {
-            //Captura com a conexão com o banco de dados.
-            this.sqlConnection =
-            DependencyService.Get<IDatabaseConnection>().DbConnection();
-
-            //Cria uma tabela baseada no modelo Cliente.
+            this.sqlConnection = DependencyService.Get<IDatabaseConnection>().DbConnection();
             this.sqlConnection.CreateTable<Cliente>();
         }
 
@@ -37,15 +34,19 @@ namespace PodePedir.DAL
 
         public IEnumerable<Cliente> GetAll()
         {
-            return (from t in sqlConnection.Table<Cliente>()
-                    select t).OrderBy(i => i.Nome).ToList();
+            return (from t in sqlConnection.Table<Cliente>() select t).OrderBy(i => i.Nome).ToList();
         }
+
 
         public Cliente GetByID(long? id)
         {
-            return sqlConnection.Table<Cliente>().FirstOrDefault
-                (c => c.ClienteId == id);
+            return sqlConnection.Table<Cliente>().FirstOrDefault(c => c.ClienteId == id);
         }
+
+
+
+
+
 
     }
 }

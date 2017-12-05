@@ -19,7 +19,12 @@ namespace PodePedir.Droid
 
             base.OnCreate(bundle);
 
+            //Inicialização da Api.
+            global::Xamarin.FormsMaps.Init(this, bundle);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            
+
             LoadApplication(new App());
         }
     }

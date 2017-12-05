@@ -3,100 +3,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PodePedir.View.Cliente.ClienteListView">
     <ContentPage.Content>
-        
-        <!-- StackLayout Principal -->
-        <StackLayout BackgroundColor="White" 
-                    HorizontalOptions="FillAndExpand" 
-                    VerticalOptions="FillAndExpand">
-            
-            <!-- Titulo da Tela -->
-            <StackLayout BackgroundColor="#542437"                    
-                    HorizontalOptions="FillAndExpand">
+
+        <!-- StackLayout principal -->
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+
+            <!-- StackLayout com o Título da Página -->
+            <StackLayout BackgroundColor="#542437" VerticalOptions="FillAndExpand" Grid.ColumnSpan="2">
                 <StackLayout.Padding>
-                    <!-- Personaliza o espaçamento em cada plataforma -->
-                    <OnPlatform x:TypeArguments="Thickness" iOS="0, 30, 0, 30"/>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,30" />
                 </StackLayout.Padding>
-                <!-- Texto do título -->
-                <Label Text="CLIENTES CADASTRADOS" FontSize="Large"
-                       FontAttributes="Bold" TextColor="#ecd078"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
-                       x:Name="lblTitulo"/>
-            </StackLayout><!-- Fecha StackLayout Titulo -->
-            
-            <!-- O Grid é o Layout da nossa lista que irá exibir os clientes -->
+                <Label Text="CLIENTES CADASTRADOS" FontSize="Large" FontAttributes="Bold" TextColor="#ecd078" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="lblTitulo"/>
+            </StackLayout>
+            <!-- Fim do StackLayout com o Título da Página -->
+
+            <!-- Grid Principal, que é um Layout em forma de Linhas e Colunas igual uma Tabela. -->
             <Grid>
-                <!-- Define os espaçamentos em cada plataforma -->
+                <!-- Define o espaçamento de Padding para cada plataforma especifica -->
                 <Grid.Padding HorizontalOptions="FillAndExpand">
-                  <OnPlatform x:TypeArguments="Thickness">
-                    <OnPlatform.iOS>
-                        5, 10, 5, 10
-                    </OnPlatform.iOS>
-                    <OnPlatform.Android>
-                        5, 10, 5, 10
-                    </OnPlatform.Android>
-                  </OnPlatform>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.iOS>
+                            5, 10, 5, 10
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            5, 10, 5, 10
+                        </OnPlatform.Android>
+                    </OnPlatform>
                 </Grid.Padding>
-                
-                <!--Define as Linhas do Grid -->
+                <!-- Define as Linhas do Grid -->
                 <Grid.RowDefinitions>
-                    <!-- ocupado todo o espaço de acordo com o objeto -->
                     <RowDefinition Height="*"/>
-                    <!-- Se ajusta de acordo com o tamanho do objeto exibido-->
+                    <!-- Ocupa todo o espaço -->
                     <RowDefinition Height="Auto"/>
+                    <!-- Se ajusta de acordo com o tamanho do objeto exibido -->
                 </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
-                    <!-- Cobina o minimo 1 de largura, mas ocupado todo o espaço -->
                     <ColumnDefinition Width="1*"/>
+                    <!-- Combina o minimo 1 de largura, mas ocupando todo o espaço -->
                 </Grid.ColumnDefinitions>
-                
-                <!--Definicao da ListView que será exibida os clientes -->
-                <ListView Grid.Row="0" Grid.Column="0" x:Name="lvClientes"
-                 ItemTapped="OnItemTapped" HasUnevenRows="True"
-                 HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
+
+               
+                <!-- Definicao da ListView que será exibida na Primeira Linha e Primeira Coluna do Grid. -->
+                <ListView Grid.Row="0" Grid.Column="0" x:Name="lvClientes" ItemTapped="OnItemTapped"
+                  HasUnevenRows="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <ListView.ItemTemplate BackgroundColor="#e6ffe6">
                         <DataTemplate>
                             <ViewCell>
-                                <!-- ContextActions são as opcoes de Ações -->
+                                <!-- O ContextActions são as opções de Ações (No Android exibida quando precisionado o item da lista e no iOS quando arrastado o item da list.  -->
                                 <ViewCell.ContextActions>
-                                    <MenuItem Clicked="OnAlterarClick" 
-                                      CommandParameter="{Binding .}" Text="Alterar"/>
-                                    <MenuItem Clicked="OnRemoverClick" 
-                                    CommandParameter="{Binding .}" Text="Remover" 
-                                    IsDestructive="True"/>
+                                    <!-- O Binding em . refere-se ao objeto selecionado, e o Clicked diz qual método será execado quando a opção de ação é clicada. -->
+                                    <MenuItem Clicked="OnAlterarClick" CommandParameter="{Binding .}" Text="Alterar" />
+                                    <MenuItem Clicked="OnRemoverClick" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                                    <!-- IsDestructive após remover, já irá realizar um Refresh, remontando a ListView mostrar a lista atualizada sem o item excluido. -->
                                 </ViewCell.ContextActions>
 
-                                <Grid Padding="5,5,20,5">
-                                    <Grid.RowDefinitions>
+                                <!--Grid dentro da ListView para organizar as informações contidas em cada linha. -->
+                                <Grid Padding="5, 5, 20, 5">
+                                    <!--Definição das linhas-->
+                                    <Grid.RowDefinitions >
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
+                                    <!--Definição das colunas -->
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="100*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <!-- Campo que ira exibir o Nome do Cliente-->
+
+                                    <!-- Campo que irá exibir o Nome do cliente -->
                                     <Label Text="{Binding Nome}" TextColor="Black" FontSize="Medium"
-                                         Grid.Row="0" Grid.Column="0"/>
+                          Grid.Row="0" Grid.Column="0" />
+                                    <!-- Campo que irá exibir o Telefone do cliente -->
                                     <Label Text="{Binding Telefone}" TextColor="Navy" FontSize="Small"
-                                          Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand"/>
-                                </Grid><!-- Fim do Grid da Lista -->
+                          Grid.Row="1" Grid.Column="0"
+                         HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                                <!--Fim do Grid da lista -->
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <!-- Stacklayout do botão para cadastrar novo cliente -->
-                <StackLayout Grid.Row="1" Grid.Column="0" Padding="0">
-                    <Button Text="NOVO CLIENTE" x:Name="BtnNovoItem" 
-                     BackgroundColor="Green" TextColor="White" FontAttributes="Bold"
-                     HeightRequest="55" Margin="10,0,10,0" Clicked="BtnNovoItemClick"/>
+
+                <!-- StackLayout contendo um botão que será exibido no final da View com opção para cadastrar novo Cliente -->
+                <StackLayout Grid.Row="1" Grid.Column="0" Padding="0" >
+                    <Button Text="NOVO CLIENTE" x:Name="BtnNovoItem" BackgroundColor="Green" TextColor="White" FontAttributes="Bold" HeightRequest="55" Margin="10,0,10,0" Clicked="BtnNovoItemClick" />
                 </StackLayout>
-                
+                <!--Fim StackLayout Botão Novo Cliente -->
+
             </Grid>
-            
-        </StackLayout><!-- Fecha a StackLayout Principal -->
-        
+            <!-- Fim do Grid Principal-->
+        </StackLayout>
+        <!-- Fim do StackLayout Principal -->
+
+
     </ContentPage.Content>
+    <!-- Fim da area de conteudo da View-->
 </ContentPage>

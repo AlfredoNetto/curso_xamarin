@@ -4,6 +4,7 @@ namespace PodePedir.Model
 {
     public class Cliente
     {
+        
         [PrimaryKey, AutoIncrement]
         public long? ClienteId { get; set; }
         public string Nome { get; set; }

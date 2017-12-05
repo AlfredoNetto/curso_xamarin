@@ -13,6 +13,7 @@ namespace PodePedir
         {
             InitializeComponent();
 
+            //Define por qual página nossa aplicação irá iniciar.
             MainPage = new PodePedir.View.SplashView();
         }
 

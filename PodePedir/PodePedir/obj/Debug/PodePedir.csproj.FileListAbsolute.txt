@@ -1,12 +1,93 @@
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.App.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.MainView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Cliente.ClienteListView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\SQLite.Net.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\SQLiteNetExtensions.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.Abstractions.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.App.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.MainView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Cliente.ClienteListView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Cliente.ClienteDetailView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Produto.ProdutoListView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Produto.ProdutoDetailView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoListView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoDetailView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Maps.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Maps.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.EntregaMapsView.xaml.g.cs
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.xml
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.Abstractions.pdb
+C:\Users\Rodrigo\Desktop\Curso Extesao\01_Aula\AULAS\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.Abstractions.xml
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.dll
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.dll
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\SQLite.Net.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\SQLiteNetExtensions.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Maps.dll
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.Abstractions.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.Abstractions.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Messaging.Abstractions.xml
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.pdb
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Maps.xml
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.csprojResolveAssemblyReference.cache
@@ -14,28 +95,15 @@ C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePe
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.MainView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Cliente.ClienteListView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Cliente.ClienteDetailView.xaml.g.cs
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.pdb
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.Abstractions.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PCLStorage.Abstractions.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.pdb
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.pdb
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Media.Abstractions.xml
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Produto.ProdutoListView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Produto.ProdutoDetailView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoListView.xaml.g.cs
 C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.View.Pedido.PedidoDetailView.xaml.g.cs
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\PodePedir.dll.config
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.csproj.App.config
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\obj\Debug\PodePedir.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Geolocator.Abstractions.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Geolocator.dll
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Geolocator.pdb
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Geolocator.xml
+C:\Users\Rodrigo\Desktop\Producao\PodePedir\PodePedir\PodePedir\bin\Debug\Plugin.Geolocator.Abstractions.pdb

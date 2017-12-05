@@ -37,7 +37,7 @@
                    Grid.Row="1" Grid.Column="0" Text="{Binding Nome}" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
 
                 <Entry Placeholder="Preço" TextColor="Black" PlaceholderColor="Gray" x:Name="txtPreco"
-                   Grid.Row="2" Grid.Column="0" Text="{Binding Preco}" Margin="10,0,0,0" />
+                   Grid.Row="2" Grid.Column="0" Text="{Binding Preco}" Margin="10,0,0,0" Keyboard="Numeric"/>
 
                 <Picker TextColor="Black" x:Name="pkCategoria" Title="Categoria" SelectedItem="{Binding Categoria}"
                    Grid.Row="3" Grid.Column="0" Margin="10,0,0,10" />

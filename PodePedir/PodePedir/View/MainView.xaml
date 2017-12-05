@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PodePedir.View.MainView">
     <MasterDetailPage.Master>
-
-
+        
+        
         <!--Um MasterDetailPage é uma página-view que possui duas aréas em sua estrutura
             
             MasterDetailPage.Master: o que for criado dentro da area Master, será fixo e exibido em todas as telas da aplicação.
@@ -14,11 +14,11 @@
         abrimos a pagina dentro da MainView na area de Detail.
         
         -->
-
-
-        <!-- Define a cor do Background da area Master, que será nosso Menu -->
+        
+                
+        <!-- Define a cor do Background da area Master, que será nosso Menu --> 
         <ContentPage Title="Menu" BackgroundColor="#542437">
-
+             
             <!--Dentro da area Master, cria um StackLayout que organiza os elementos em pilha (um em cima do outro, e é o que queremos para nosso menu vertical. -->
             <StackLayout Orientation="Vertical">
 
@@ -26,7 +26,7 @@
                 <StackLayout BackgroundColor="#c02942" HeightRequest="75">
                     <Label Text="Opções" FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" TextColor="White" HorizontalOptions="Center"/>
                 </StackLayout>
-
+                
                 <!-- Após o título, empilhamos uma Listview que irá carregar os itens do nosso Menu -->
                 <ListView x:Name="menu_navegacao" RowHeight="60" SeparatorVisibility="None" BackgroundColor="#542437" ItemSelected="OnMenuItemSelected">
                     <ListView.ItemTemplate>

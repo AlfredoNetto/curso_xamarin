@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:conv="clr-namespace:PodePedir.Model"
-             x:Class="PodePedir.View.Pedido.PedidoDetailView">
+             x:Class="PodePedir.View.Pedido.PedidoDetailView" BackgroundColor="#fff">
     <ContentPage.Resources>
         <ResourceDictionary>
             <conv:ByteToImageSourceConverter x:Key="convImage"/>
